@@ -147,18 +147,21 @@ h1{
     margin: 0;
 }
 
-project-image {
+.project-image {
     width: 100%;
     height: auto;
     display: block;
     margin: 0;
     padding: 0;
     border: 0;
-opacity: 0;
-transform: translateY(40px);
-transition: all 0.8s ease;}
-projects h2 {
-    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.project-image.show {
+    opacity: 1;
+    transform: translateY(0);
 }
    
 </style>
