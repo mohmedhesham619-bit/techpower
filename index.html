@@ -142,7 +142,7 @@ h1{
     transform:scale(1.1);
 }
 
-   projects {
+   #projects {
     padding: 0;
     margin: 0;
 }
@@ -160,6 +160,16 @@ h1{
 }
 
 .project-image.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+   .fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+fade-section.show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -182,7 +192,7 @@ h1{
 Electrical & Low Current Contracting
 </p>
 
-   <div class="line"></div>
+   <section dir="rtl" class="fade-section">
    
 <p class="tagline">
 حلول هندسية بمعايير احترافية
@@ -190,7 +200,7 @@ Electrical & Low Current Contracting
 
    <div class="line"></div>
     
-<section dir="rtl">
+<section dir="rtl" class="fade-section">
 
 <h2>خدماتنا</h2>
 
@@ -214,7 +224,7 @@ Electrical & Low Current Contracting
 
 </section>
 
-  <section dir="rtl">
+  <section dir="rtl" class="fade-section">
 
 <h2>عن TECH POWER</h2>
 
@@ -224,7 +234,7 @@ Electrical & Low Current Contracting
 </p>
   </section>
 
-<section id="projects">
+<section id="projects" class="fade-section">
     <h2>Our Projects</h2>
 
     <img src="project-01.jpg" class="project-image" alt="Project 1">
@@ -241,8 +251,9 @@ Electrical & Low Current Contracting
     <img src="project-12.jpg" class="project-image" alt="Project 12">
     <img src="project-13.jpg" class="project-image" alt="Project 13">
 </section>
-   
-  
+
+      
+   </section>
 <a class="btn" href="https://wa.me/201109500118" target="_blank">
 Contact Us
 </a>
@@ -271,8 +282,8 @@ Contact Us
       
 </a>
 
-   <script>
-const images = document.querySelectorAll('.project-image');
+<script>
+const elements = document.querySelectorAll('.fade-section, .project-image');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -284,10 +295,10 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.2
 });
 
-images.forEach(image => {
-    observer.observe(image);
+elements.forEach(element => {
+    observer.observe(element);
 });
-   </script>
+</script>
    
 </body>
 </html>
