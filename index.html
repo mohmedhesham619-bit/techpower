@@ -154,8 +154,10 @@ project-image {
     margin: 0;
     padding: 0;
     border: 0;
-}
-#projects h2 {
+opacity: 0;
+transform: translateY(40px);
+transition: all 0.8s ease;}
+projects h2 {
     margin-bottom: 25px;
 }
    
@@ -265,6 +267,24 @@ Contact Us
    <i class="fa-brands fa-whatsapp"></i>
       
 </a>
+
+   <script>
+const images = document.querySelectorAll('.project-image');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+images.forEach(image => {
+    observer.observe(image);
+});
+   </script>
    
 </body>
 </html>
