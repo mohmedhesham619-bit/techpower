@@ -203,21 +203,38 @@ h1{
     opacity:1;
     transform:translateY(0);
 }
-   .tp-logo{
-    font-size:95px;
-    font-weight:900;
+.tp-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-bottom:20px;
 }
 
 .t{
-    color:#f0f0f0;
-    text-shadow:0 4px 12px rgba(0,0,0,.8);
+    font-size:95px;
+    font-weight:900;
+    color:#ececec;
+    text-shadow:0 5px 15px rgba(0,0,0,.7);
+}
+
+.p{
+    position:relative;
+    font-size:95px;
+    font-weight:900;
+    color:#007bff;
+    margin-left:-8px;
+    text-shadow:0 0 20px rgba(0,123,255,.6);
 }
 
 .bolt{
-    color:#009dff;
-    margin:0 -10px;
-    text-shadow:0 0 18px #009dff;
+    position:absolute;
+    width:42px;
+    height:70px;
+    left:-12px;
+    top:12px;
+    filter:
+        drop-shadow(0 0 10px #00a2ff)
+        drop-shadow(0 0 20px #00a2ff);
 }
 
 .p{
@@ -269,7 +286,19 @@ h1{
 <header>
 
 <div class="tp-logo">
-<span class="t">T</span><span class="bolt">⚡</span><span class="p">P</span>
+
+    <span class="t">T</span>
+
+    <span class="p">
+        P
+
+        <svg class="bolt" viewBox="0 0 60 100">
+            <polygon points="30,0 0,55 23,55 10,100 60,35 35,35"
+            fill="#00A2FF"/>
+        </svg>
+
+    </span>
+
 </div>
 
 <h1 class="brand">
